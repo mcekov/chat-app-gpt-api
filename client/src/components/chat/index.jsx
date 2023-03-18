@@ -7,6 +7,7 @@ import {
 
 import CustomerHeader from "@/components/customerHeader";
 import StandardMessageForm from "@/components/customMessageForms/StandartMessageForm";
+import Ai from "@/components/customMessageForms/Ai";
 
 const Chat = () => {
   const chatProps = useMultiChatLogic(
@@ -22,6 +23,10 @@ const Chat = () => {
         {...chatProps}
         renderChatHeader={(chat) => <CustomerHeader chat={chat} />}
         renderMessageForm={(props) => {
+          if (chatProps.chat?.title.startsWith("AiChat_")) {
+            return <Ai props={props} activeChat={chatProps.chat} />;
+          }
+
           return (
             <StandardMessageForm props={props} activeChat={chatProps.chat} />
           );
