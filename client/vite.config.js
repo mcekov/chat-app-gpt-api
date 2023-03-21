@@ -19,3 +19,12 @@ export default defineConfig({
   
 });
 
+// check the vite-plugin-require-transform params'type 
+export type VitePluginRequireTransformParamsType = {
+	//filter files that should enter the plugin
+	fileRegex?: RegExp = /.ts$|.tsx$/ ,
+	//prefix that would plugin into the requireSpecifier 
+	importPrefix? = '_vite_plugin_require_transform_': string,
+	//to deal with the requireSpecifier
+	importPathHandler?: Function
+}
