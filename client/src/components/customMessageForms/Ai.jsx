@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { usePostAiTextMutation } from "@/state/api";
+import { usePostAiTextMutation } from "../../state/api";
 
 import MessageFormUi from "./MessageFormUi";
 

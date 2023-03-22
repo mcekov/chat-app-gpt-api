@@ -5,13 +5,13 @@ import {
   MultiChatWindow,
 } from "react-chat-engine-advanced";
 
-import CustomHeader from "@/components/customHeader";
-import StandardMessageForm from "@/components/customMessageForms/StandartMessageForm";
-import Ai from "@/components/customMessageForms/Ai";
+import CustomHeader from "../customHeader";
+import StandardMessageForm from "../customMessageForms/StandartMessageForm";
+import Ai from "../customMessageForms/Ai";
 
 const Chat = () => {
   const chatProps = useMultiChatLogic(
-    import.meta.env.VITE_PROJECT_ID,
+    process.env.REACT_APP_PROJECT_ID,
     "testuser",
     "123"
   );
