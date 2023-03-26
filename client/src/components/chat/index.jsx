@@ -10,11 +10,13 @@ import StandardMessageForm from "../customMessageForms/StandartMessageForm";
 import Ai from "../customMessageForms/Ai";
 import AiCode from "../customMessageForms/AiCode";
 
-const Chat = () => {
+const Chat = ({ user, secret }) => {
   const chatProps = useMultiChatLogic(
     process.env.REACT_APP_PROJECT_ID,
-    process.env.REACT_APP_CHAT_USERNAME,
-    process.env.REACT_APP_CHAT_PASSWORD
+    "testuser",
+    "6Y7MTdprx@FPy"
+    /* user,
+    secret */
   );
   return (
     <div style={{ flexBasis: "100%" }}>
