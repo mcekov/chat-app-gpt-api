@@ -158,7 +158,7 @@ router.post("/code", async (req, res) => {
         headers: {
           "Project-ID": process.env.PROJECT_ID,
           "User-Name": process.env.BOT_USER_NAME,
-          "User-Secret": process.env.BOT_USER_SECRET,
+          "User-Secret": process.env.BOT_USER_KEY,
         },
       }
     );
