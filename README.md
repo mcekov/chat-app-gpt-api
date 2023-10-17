@@ -1,4 +1,4 @@
-# Chat App with ChatGPT API
+# Chat app with chatGPT API
 
 Full stack chat app (ChatGPT API, React, Redux Toolkit, Node, OpenAI)
 
